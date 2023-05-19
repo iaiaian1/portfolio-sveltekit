@@ -17,7 +17,7 @@
 
 </script>
 
-<div class="flex justify-between lg:justify-around py-6 px-4 transition-all duration-1000 {$dark ? 'bg-lampblack text-white' : 'text-black bg-slate-200'} font-quicksand text-lg font-bold">
+<div class="flex justify-between lg:justify-around py-6 px-4 transition-all duration-1000 {$dark ? 'bg-neutralBlackC text-white' : 'text-black bg-slate-200'} font-quicksand text-lg font-bold">
     <button class="p-2 rounded-lg lg:order-last" on:click={toggleTheme}> <img src={$dark ? night : day} alt="" class="w-8 transform transition duration-500 ease-in-out fill-white {$dark ? 'rotate-45' : 'rotate-90'}"></button>
     <div class="hidden lg:flex items-center gap-x-5">
         <div class="group">

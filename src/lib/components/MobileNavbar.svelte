@@ -5,7 +5,7 @@
     export let open = false;
 </script>
 
-<div class="aside absolute lg:hidden top-0 w-full h-full flex flex-col items-center justify-center gap-y-10 z-10 font-quicksand text-2xl font-bold {open ? "open" : ""} {$dark ? ' bg-lampblack text-white' : 'bg-slate-200 text-black'}">
+<div class="aside absolute lg:hidden top-0 w-full h-full flex flex-col items-center justify-center gap-y-10 z-10 font-quicksand text-2xl font-bold {open ? "open" : ""} {$dark ? ' bg-neutralBlackC text-white' : 'bg-slate-200 text-black'}">
     <!-- <img src={faith_logo_white} alt="faith_logo" class="h-28"> -->
     <div class="flex flex-col items-center gap-y-10">
         <div class="group">

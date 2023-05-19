@@ -3,7 +3,7 @@
     import Spotify from "$lib/components/Spotify.svelte";
 </script>
 
-<div class="flex flex-col lg:flex-row justify-around p-5 gap-y-5 font-quicksand transition-all duration-1000 {$dark ? ' bg-lampblack text-white' : 'bg-slate-200 text-black'}">
+<div class="flex flex-col lg:flex-row justify-around p-5 gap-y-5 font-quicksand transition-all duration-1000 {$dark ? ' bg-neutralBlackC text-white' : 'bg-slate-200 text-black'}">
     <div class="flex flex-col items-center lg:items-start text-base lg:text-lg">
         <Spotify/>
         <p>Built from scratch using SvelteKit ⚡</p>

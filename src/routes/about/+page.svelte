@@ -12,7 +12,7 @@
 </script>
 
 <Navbar bind:open bind:currentPage/>
-<div class="flex flex-col items-center py-10 transition-all duration-1000 {$dark ? ' bg-lampblack' : 'bg-slate-200'} {$dark ? 'text-slate-200' : 'text-black'} font-quicksand">
+<div class="flex flex-col items-center py-10 transition-all duration-1000 {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'} {$dark ? 'text-slate-200' : 'text-black'} font-quicksand">
     <!-- https://svelte.dev/repl/62235b43f41948d4bd2b03221668a246?version=3.31.0 -->
     <p class="text-2xl lg:text-4xl font-bold mb-2 underline decoration-green-500">About me</p>
     <div class="flex flex-wrap mb-36 p-4 justify-center gap-5">

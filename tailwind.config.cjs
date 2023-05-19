@@ -11,6 +11,7 @@ const config = {
 			},
 			colors: {
 				lampblack : "#231F20",
+				neutralBlackC : "#232222",
 			},
 			animation: {
 				'spin-slow': 'spin 10s linear infinite',

@@ -205,7 +205,7 @@
 <svelte:window bind:scrollY={scroll} />
 
 <!-- 1st screen -->
-<div class="h-screen transition-all duration-1000 {$dark ? ' bg-lampblack' : 'bg-slate-200'}">
+<div class="h-screen transition-all duration-1000 {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'}">
     <Navbar bind:open bind:currentPage/>
     <!-- https://svelte.dev/repl/62235b43f41948d4bd2b03221668a246?version=3.31.0 -->
 
@@ -219,18 +219,18 @@
 </div>
 
 <!-- 2nd screen -->
-<div class="flex flex-col justify-center items-center p-4 transition-all duration-1000 {$dark ? ' bg-lampblack' : 'bg-slate-200'} {$dark ? ' text-white' : 'text-black'}">
+<div class="flex flex-col justify-center items-center p-4 transition-all duration-1000 {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'} {$dark ? ' text-white' : 'text-black'}">
     <p class="font-quicksand font-bold text-2xl lg:text-5xl border-b-4 border-green-500 mb-10 lg:mb-20">Projects I have worked on.</p>
 
     <div class="flex flex-col lg:flex-row gap-x-10 justify-around w-full">
-        <div class="flex flex-col sticky h-full w-full lg:w-[35rem] lg:my-72 top-0 lg:top-1/2 py-10 lg:p-auto z-10 font-quicksand text-lg lg:text-3xl lg:order-last text-center lg:text-start {$dark ? ' bg-lampblack' : 'bg-slate-200'}">
+        <div class="flex flex-col sticky h-full w-full lg:w-[35rem] lg:my-72 top-0 lg:top-1/2 py-10 lg:p-auto z-10 font-quicksand text-lg lg:text-3xl lg:order-last text-center lg:text-start {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'}">
             <a href="https://projectarcana-aosp.netlify.app/" target="_blank" referrerpolicy="no-referrer" class="transition-all duration-500 {activeInterectText == "Arcana" ? "font-bold text-2xl lg:text-4xl text-green-500 cursor-pointer" : "pointer-events-none"}">Project-Arcana Custom Rom</a>
             <a href="https://tracker-capstone.netlify.app/" target="_blank" referrerpolicy="no-referrer" class="transition-all duration-500 {activeInterectText == "Agtatacay" ? "font-bold text-2xl lg:text-4xl text-green-500 cursor-pointer" : "pointer-events-none"}">Agtatacay Sur Tracker</a>
             <a href="https://github.com/iaiaian1/POS" target="_blank" referrerpolicy="no-referrer" class="transition-all duration-500 {activeInterectText == "POS" ? "font-bold text-2xl lg:text-4xl text-green-500 cursor-pointer" : "pointer-events-none"}">JVS POS System</a>
             <a href="https://github.com/iaiaian1/Soulsborne-Save-Manager" target="_blank" referrerpolicy="no-referrer" class="transition-all duration-500 {activeInterectText == "Soulsborne" ? "font-bold text-2xl lg:text-4xl text-green-500 cursor-pointer" : "pointer-events-none"}">Soulsborne Save Manager</a>
         </div>
         <div class="flex flex-col gap-y-[35rem] p-2 lg:p-auto">
-            <div class="animated intersect1 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-lampblack'} rounded-lg" style="opacity: {intersect1}%">
+            <div class="animated intersect1 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-neutralBlackC'} rounded-lg" style="opacity: {intersect1}%">
                 <Arcana/>
                 <div class="flex flex-wrap gap-2">
                     <p class="px-2 border-2 rounded-xl border-green-500">Node.js</p>
@@ -239,7 +239,7 @@
                     <p class="px-2 border-2 rounded-xl border-green-500">TailwindCSS</p>
                 </div>
             </div>
-            <div class="animated intersect2 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-lampblack'} rounded-lg" style="opacity: {intersect2}%">
+            <div class="animated intersect2 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-neutralBlackC'} rounded-lg" style="opacity: {intersect2}%">
                 <Agtatacay/>
                 <div class="flex flex-wrap gap-2">
                     <p class="px-2 border-2 rounded-xl border-green-500">Node.js</p>
@@ -248,14 +248,14 @@
                     <p class="px-2 border-2 rounded-xl border-green-500">TailwindCSS</p>
                 </div>
             </div>
-            <div class="animated intersect3 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-lampblack'} rounded-lg" style="opacity: {intersect3}%">
+            <div class="animated intersect3 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-neutralBlackC'} rounded-lg" style="opacity: {intersect3}%">
                 <POS/>
                 <div class="flex gap-2">
                     <p class="px-2 border-2 rounded-xl border-green-500">C#</p>
                     <p class="px-2 border-2 rounded-xl border-green-500">SQL</p>
                 </div>
             </div>
-            <div class="animated intersect4 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-lampblack'} rounded-lg" style="opacity: {intersect4}%">
+            <div class="animated intersect4 flex flex-col justify-center items-center lg:items-start p-2 gap-y-2 transform duration-500 ease-out border-2 {$dark ? ' border-white' : 'border-neutralBlackC'} rounded-lg" style="opacity: {intersect4}%">
                 <Soulsborne/>
                 <div class="flex gap-2">
                     <p class="px-2 border-2 rounded-xl border-green-500">C#</p>
@@ -264,25 +264,28 @@
         </div>
     </div>
 </div>
-<div class="flex flex-col items-center justify-center h-screen lg:py-20 {$dark ? ' bg-lampblack' : 'bg-slate-200'} {$dark ? ' text-white' : 'text-black'} ">
-    <p class="font-quicksand text-2xl lg:text-5xl mb-8">{'<programming languages 💻/>'}</p>
-    <div class="grid grid-cols-3 gap-10 mb-20 lg:mb-32">
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="html5"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="css3"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="react"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="svelte"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="tailwindcss"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="node"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="git"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-14 {$dark ? ' invert' : ''} scale-0 rotate-45 animatedIntersect" alt="github"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="w-14 scale-0 rotate-45 animatedIntersect" alt="mysql"/>
+<div class="flex flex-col items-center justify-center h-screen lg:py-20 {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'} {$dark ? ' text-white' : 'text-black'} ">
+    <p class="font-quicksand text-2xl lg:text-5xl mb-6">{'<languages/technologies 💻/>'}</p>
+    <div class="grid grid-cols-3 lg:grid-cols-6 gap-10 mb-20 lg:mb-32">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="html5"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="css3"/>       
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="javascript"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/svelte/svelte-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="svelte"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="react"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="tailwindcss"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="firebase"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="flutter"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="node"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="mysql"/>        
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="git"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 lg:w-14 {$dark ? ' invert' : ''} scale-0 rotate-45 animatedIntersect" alt="github"/>
     </div>
 
     <p class="font-quicksand text-2xl lg:text-5xl mb-8">editing/media softwares 🎬</p>
     <div class="grid grid-cols-3 gap-10">
-        <img src="https://img.icons8.com/color/96/null/adobe-premiere-pro--v1.png" class="w-14 scale-0 rotate-45 animatedIntersect" alt="premiere"/>
-        <img src="https://img.icons8.com/color/96/null/adobe-photoshop--v1.png" class="w-14 scale-0 rotate-45 animatedIntersect" alt="photoshop"/>
-        <img src="https://img.icons8.com/ios-filled/100/null/obs-studio.png" class="w-14 scale-0 rotate-45 animatedIntersect" alt="obs"/> 
+        <img src="https://img.icons8.com/color/96/null/adobe-premiere-pro--v1.png" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="premiere"/>
+        <img src="https://img.icons8.com/color/96/null/adobe-photoshop--v1.png" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="photoshop"/>
+        <img src="https://img.icons8.com/ios-filled/100/null/obs-studio.png" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="obs"/> 
     </div>    
 </div>
 <Footer/>

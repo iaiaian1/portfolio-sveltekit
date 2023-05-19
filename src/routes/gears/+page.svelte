@@ -9,7 +9,7 @@
 </script>
 
 <Navbar bind:open bind:currentPage/>
-<div class="flex flex-col items-center py-10 transition-all duration-1000 {$dark ? 'text-slate-200 bg-lampblack' : 'text-black bg-slate-200'} font-quicksand">
+<div class="flex flex-col items-center py-10 transition-all duration-1000 {$dark ? 'text-slate-200 bg-neutralBlackC' : 'text-black bg-slate-200'} font-quicksand">
     <p class="text-2xl lg:text-4xl font-bold mb-10 underline decoration-green-500 self-center">Gears and Peripherals</p>
     <div class="flex flex-col gap-y-8 lg:w-[60rem] lg:text-lg px-2">
         <div class="">
