@@ -14,7 +14,7 @@
 <Navbar bind:open bind:currentPage/>
 <div class="flex flex-col items-center py-10 transition-all duration-1000 {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'} {$dark ? 'text-slate-200' : 'text-black'} font-quicksand">
     <!-- https://svelte.dev/repl/62235b43f41948d4bd2b03221668a246?version=3.31.0 -->
-    <p class="text-2xl lg:text-4xl font-bold mb-2 underline decoration-green-500">About me</p>
+    <p class="text-2xl lg:text-4xl border-b-2 border-green-500 font-bold mb-2">About me</p>
     <div class="flex flex-wrap mb-36 p-4 justify-center gap-5">
         <img class="w-72 border-2 border-green-500 rounded-2xl pointer-events-none" src={me} alt="me">
         <div class="lg:text-lg lg:w-[50rem]">
@@ -23,15 +23,15 @@
             <br>
             <p>I'm a gradwaiting student taking a Bachelor's Degree in Information Technology at Filamer Christian University.</p>
             <br>
-            <p>I have various hobbies which are tinkering with computers; hardware and software, android phones, playing games, editing videos and writing codes. I learned a lot of programming languages in school too like Java, C#, Python, Flutter, PHP etc. I have recently started doing web-development and back-end development too and finds it very interesting starting with React.</p>
+            <p>I have various hobbies which are tinkering with computers; hardware and software, android phones, playing games, editing videos and writing codes. I learned a lot of programming languages in school too like Java, C#, Python, Flutter, PHP etc. I have recently started doing web-development and back-end development too and found it very interesting starting with React.</p>
             <br>
             <p>Tl;dr I'm a tech person!</p>
         </div>
     </div>
-    <p class="text-2xl lg:text-4xl font-bold underline">My timeline</p>
+    <p class="text-2xl lg:text-4xl border-b-2 border-green-500 font-bold">My timeline</p>
     <div class="flex flex-col gap-y-14 p-4 lg:w-[60rem] lg:text-lg">
         <!-- <a class="underline decoration-green-500 font-bold" href="" referrerpolicy="no-referrer" target="_blank"></a> -->
-        <div class="border-t-2">
+        <div class="">
             <p class="text-xl lg:text-2xl font-bold mb-2">2023</p>
             <ul class="list-inside list-disc">
                 <li>Started On-The-Job Internship at <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://www.coderstribe.net/" referrerpolicy="no-referrer" target="_blank">Coders Tribe</a>.</li>

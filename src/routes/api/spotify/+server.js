@@ -6,12 +6,12 @@ import { AUTHORIZATION_CODE } from '$env/static/private';
 
 export async function GET({request, locals}) {
 
-    const basic = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')
+    const encodedCredentials = Buffer.from(`${CLIENT_ID}:${CLIENT_SECRET}`).toString('base64')
     
     const accessToken = await fetch('https://accounts.spotify.com/api/token', {
         method: 'POST',
         headers: {
-            'Authorization': `Basic ${basic}`,
+            'Authorization': `Basic ${encodedCredentials}`,
             'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: new URLSearchParams({

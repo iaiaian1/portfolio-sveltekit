@@ -10,10 +10,10 @@
 
 <Navbar bind:open bind:currentPage/>
 <div class="flex flex-col items-center py-10 transition-all duration-1000 {$dark ? 'text-slate-200 bg-neutralBlackC' : 'text-black bg-slate-200'} font-quicksand">
-    <p class="text-2xl lg:text-4xl font-bold mb-10 underline decoration-green-500 self-center">Gears and Peripherals</p>
+    <p class="text-2xl lg:text-4xl font-bold mb-10 border-b-2 border-green-500 self-center">Gears and Peripherals</p>
     <div class="flex flex-col gap-y-8 lg:w-[60rem] lg:text-lg px-2">
         <div class="">
-            <p class="mb-2 text-xl lg:text-2xl font-bold underline decoration-green-500">Desktop PC (Workhorse) 💪</p>
+            <p class="mb-2 text-xl lg:text-2xl font-bold">Desktop PC (Workhorse) 💪</p>
             <ul class="list-inside list-disc">
                 <li><span class="font-bold">CPU:</span> i5 - 4460k.</li>
                 <li><span class="font-bold">MOBO:</span> ASUS H81M-A.</li>
@@ -24,7 +24,7 @@
             </ul>
         </div>
         <div class="">
-            <p class="mb-2 text-xl lg:text-2xl font-bold underline decoration-green-500">Peripherals 🎧</p>
+            <p class="mb-2 text-xl lg:text-2xl font-bold">Peripherals 🎧</p>
             <ul class="list-inside list-disc">
                 <li><span class="font-bold">Keyboard:</span> Redragon K552 KUMARA (Red only, no RGB.).</li>
                 <li><span class="font-bold">Mouse:</span> Rakk Kaptan.</li>
@@ -34,7 +34,7 @@
             </ul>
         </div>
         <div class="">
-            <p class="mb-2 text-xl lg:text-2xl font-bold underline decoration-green-500">Softwares 💿</p>
+            <p class="mb-2 text-xl lg:text-2xl font-bold">Softwares 💿</p>
             <ul class="list-inside list-disc">
                 <li><span class="font-bold">Microsoft Edge</span> for browsing and testing.</li>
                 <li><span class="font-bold">qBittorrent</span> , open-source torrent client.</li>

@@ -1,33 +1,26 @@
 <script>
-    import { onMount } from "svelte/internal";
-    import { fade, fly } from 'svelte/transition';
-    import { spring, tweened } from "svelte/motion"
-    import { cubicOut, backIn } from 'svelte/easing';
+    import { afterUpdate, onMount } from "svelte/internal";
+    import { spring } from "svelte/motion"
     import { dark } from "./stores";
 	
-	import Navbar from "$lib/components/Navbar.svelte";
+    import Navbar from "$lib/components/Navbar.svelte";
     
-	import Arcana from "$lib/components/projects/Arcana.svelte";
-	import Agtatacay from "$lib/components/projects/Agtatacay.svelte";
+    import Arcana from "$lib/components/projects/Arcana.svelte";
+    import Agtatacay from "$lib/components/projects/Agtatacay.svelte";
     import POS from "$lib/components/projects/POS.svelte";
-	import Soulsborne from "$lib/components/projects/Soulsborne.svelte";
-	import Footer from "$lib/components/Footer.svelte";
+    import Soulsborne from "$lib/components/projects/Soulsborne.svelte";
+    import Footer from "$lib/components/Footer.svelte";
 
     // MobileNavbar
     export let open = false
     // Navbar underline
     let currentPage = '/';
 
-    // let scrollY = tweened(0 , {
-	// 	duration: 400,
-	// 	easing: backIn
-	// });
     let scrollY = spring(0 , {
-		stiffness: 0.15,
-		damping: 0.8
-	});
+        stiffness: 0.15,
+        damping: 0.8
+    });
 
-    let currentProject = 'Arcana';
     let scroll = 0;
 
     let intersect1 = 0;
@@ -84,22 +77,12 @@
             entries.forEach((entry, index) => {
                 setTimeout(() => {
                     if(entry.isIntersecting){
-                    // console.log('intersected')
-                    // entry.target.classList.remove("w-14")
-                    // entry.target.classList.add("transition-all", "w-20")
-                    // observer2.unobserve(entry.target)
                         entry.target.classList.remove("scale-0", "rotate-45")
                         entry.target.classList.add("transition-all", "duration-500", "scale-100")
                         observer2.unobserve(entry.target)
                     }
                 }, 300 * index );
             })
-
-            // setTimeout(() => {
-            //     entries.forEach((entry) => {
-            //         if()
-            //     });
-            // }, 500);
         },{
             threshold: 1,
         })
@@ -111,87 +94,15 @@
         animatedIntersect.forEach(element => {
             observer2.observe(element)
         })
-
-        // const animated1 = document.querySelectorAll('.animated1')
-        // const animated2 = document.querySelectorAll('.animated2')
-        // const animated3 = document.querySelectorAll('.animated3')
-        // const animated4 = document.querySelectorAll('.animated4')
-
-        // const observer = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //         if(entry.isIntersecting){
-        //             // intersect1 = entry.intersectionRatio + 1
-        //             intersect1 = parseFloat(entry.intersectionRatio.toFixed(2).toString().split('.')[1])
-        //             if(intersect1 < 40){
-        //                 intersect1 = 0
-        //             }
-        //         }
-        //     })
-        // },{
-        //     // Sets the threshold of visibility of when to execute
-        //     // 1 = 100%, 0 = 1pixel.
-        //     threshold: [0, .25, .5, .75, 1],
-        // })
-
-        // const observer2 = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //         if(entry.isIntersecting){
-        //             intersect2 = parseFloat(entry.intersectionRatio.toFixed(2).toString().split('.')[1])
-        //             if(intersect2 < 35){
-        //                 intersect2 = 0
-        //             }
-        //         }
-        //     })
-        // },{
-        //     // Sets the threshold of visibility of when to execute
-        //     // 1 = 100%, 0 = 1pixel.
-        //     threshold: [0, .25, .5, .75, 1],
-        // })
-
-        // const observer3 = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //         if(entry.isIntersecting){
-        //             intersect3 = parseFloat(entry.intersectionRatio.toFixed(2).toString().split('.')[1])
-        //             if(intersect3 < 35){
-        //                 intersect3 = 0
-        //             }
-        //         }
-        //     })
-        // },{
-        //     // Sets the threshold of visibility of when to execute
-        //     // 1 = 100%, 0 = 1pixel.
-        //     threshold: [0, .25, .5, .75, 1],
-        // })
-
-        // const observer4 = new IntersectionObserver((entries) => {
-        //     entries.forEach(entry => {
-        //         if(entry.isIntersecting){
-        //             intersect4= parseFloat(entry.intersectionRatio.toFixed(2).toString().split('.')[1])
-        //             if(intersect4 < 35){
-        //                 intersect4 = 0
-        //             }
-        //         }
-        //     })
-        // },{
-        //     // Sets the threshold of visibility of when to execute
-        //     // 1 = 100%, 0 = 1pixel.
-        //     threshold: [0, .25, .5, .75, 1],
-        // })
-
-        // animated1.forEach(element => {
-        //     observer.observe(element)
-        // });
-
-        // animated2.forEach(element => {
-        //     observer2.observe(element)
-        // });
-        // animated3.forEach(element => {
-        //     observer3.observe(element)
-        // });
-        // animated4.forEach(element => {
-        //     observer.observe(element)
-        // });
     }
+
+    // {$dark ? 'invert' : ''} is not working, this is a workaround to apply invert after DOM is updated when $dark value changes to true. original img is dark.
+    afterUpdate(() => {
+        const image = document.querySelector(".github");
+        if (image) {
+            image.classList.toggle("invert", $dark);
+        }
+    })
 
     onMount(async () =>{
         intersectAnimation()
@@ -213,14 +124,13 @@
         <div class="text-start mx-5">
             <p class="text-5xl md:text-7xl font-quicksand mb-2">Jake Brian Yap (@iaiaian1)</p>
             <p class="text-3xl md:text-5xl font-nanum text-green-500">I code and edit stuffs.</p>
-            <!-- <p class="text-3xl md:text-5xl font-nanum {$dark ? ' text-green-500' : 'text-green-800'}">I code and edit stuffs.</p> -->
         </div>
     </div>
 </div>
 
 <!-- 2nd screen -->
 <div class="flex flex-col justify-center items-center p-4 transition-all duration-1000 {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'} {$dark ? ' text-white' : 'text-black'}">
-    <p class="font-quicksand font-bold text-2xl lg:text-5xl border-b-4 border-green-500 mb-10 lg:mb-20">Projects I have worked on.</p>
+    <p class="font-quicksand font-bold text-2xl lg:text-5xl border-b-2 border-green-500 mb-10 lg:mb-20">Projects I have worked on.</p>
 
     <div class="flex flex-col lg:flex-row gap-x-10 justify-around w-full">
         <div class="flex flex-col sticky h-full w-full lg:w-[35rem] lg:my-72 top-0 lg:top-1/2 py-10 lg:p-auto z-10 font-quicksand text-lg lg:text-3xl lg:order-last text-center lg:text-start {$dark ? ' bg-neutralBlackC' : 'bg-slate-200'}">
@@ -278,7 +188,7 @@
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="node"/>
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original-wordmark.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="mysql"/>        
         <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect" alt="git"/>
-        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 lg:w-14 {$dark ? ' invert' : ''} scale-0 rotate-45 animatedIntersect" alt="github"/>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" class="w-12 lg:w-14 scale-0 rotate-45 animatedIntersect github" alt="github"/>
     </div>
 
     <p class="font-quicksand text-2xl lg:text-5xl mb-8">editing/media softwares 🎬</p>
