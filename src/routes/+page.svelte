@@ -37,6 +37,16 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if(entry.isIntersecting){
+                    if(entry.target.classList.contains('name-text')){
+                        entry.target.classList.remove('-translate-x-32', 'opacity-0')
+                        entry.target.classList.add('transition', 'duration-[1500ms]', 'ease-in-out')
+                        observer.unobserve(entry.target)
+                    }
+                    if(entry.target.classList.contains('desc-text')){
+                        entry.target.classList.remove('-translate-y-14', 'opacity-0', 'text-white')
+                        entry.target.classList.add('transition', 'duration-[2000ms]', 'ease-in-out', 'text-green-500')
+                        observer.unobserve(entry.target)
+                    }
                     if(entry.target.classList.contains('intersect1')){
                         activeInterectText = "Arcana"
                         intersect1 = Math.round(entry.intersectionRatio * 100) + 25
@@ -122,8 +132,8 @@
 
     <div class="sticky top-1/2 mb-2 flex justify-center items-center {$dark ? ' text-white' : 'text-black'}" style="transform: translateY(-{$scrollY}px);">
         <div class="text-start mx-5">
-            <p class="text-5xl md:text-7xl font-quicksand mb-2">Jake Brian Yap (@iaiaian1)</p>
-            <p class="text-3xl md:text-5xl font-nanum text-green-500">I code and edit stuffs.</p>
+            <p class="animated name-text -translate-x-32 opacity-0 text-5xl md:text-7xl font-quicksand mb-2">Jake Brian Yap (@iaiaian1)</p>
+            <p class="animated desc-text -translate-y-14 opacity-0 text-3xl md:text-5xl font-nanum text-white">I code and edit stuffs.</p>
         </div>
     </div>
 </div>
