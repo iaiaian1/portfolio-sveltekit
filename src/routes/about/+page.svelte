@@ -18,10 +18,10 @@
     <div class="flex flex-wrap mb-36 p-4 justify-center gap-5">
         <img class="w-72 border-2 border-green-500 rounded-2xl pointer-events-none" src={me} alt="me">
         <div class="lg:text-lg lg:w-[50rem]">
-            <p class="text-xl lg:text-2xl font-bold">Jake Brian Yap</p>
-            <p class="text-lg lg:text-xl">Aspiring Software Developer</p>
+            <p class="text-xl lg:text-2xl font-bold">Jake Brian Yap.</p>
+            <p class="text-lg lg:text-xl">Aspiring Software Developer.</p>
             <br>
-            <p>I'm a gradwaiting student taking a Bachelor's Degree in Information Technology at Filamer Christian University.</p>
+            <p>I'm a college graduate with a Bachelor's Degree in Information Technology at Filamer Christian University.</p>
             <br>
             <p>I have various hobbies which are tinkering with computers; hardware and software, android phones, playing games, editing videos and writing codes. I learned a lot of programming languages in school too like Java, C#, Python, Flutter, PHP etc. I have recently started doing web-development and back-end development too and found it very interesting starting with React.</p>
             <br>
@@ -36,7 +36,8 @@
             <ul class="list-inside list-disc">
                 <li>Started On-The-Job Internship at <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://www.coderstribe.net/" referrerpolicy="no-referrer" target="_blank">Coders Tribe</a>.</li>
                 <li>Learned <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://svelte.dev/" referrerpolicy="no-referrer" target="_blank">Svelte</a> and <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://kit.svelte.dev/" referrerpolicy="no-referrer" target="_blank">SvelteKit.</a></li>
-                <li>Waiting for graduation!</li>
+                <li>Finished On-The-Job Internship.</li>
+                <li>Finished my college degree!</li>
             </ul>
         </div>
         <div class="border-t-2">
