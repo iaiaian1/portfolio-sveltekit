@@ -47,6 +47,12 @@
                         entry.target.classList.add('transition', 'duration-[2000ms]', 'ease-in-out', 'text-green-500')
                         observer.unobserve(entry.target)
                     }
+                    if(entry.target.classList.contains('resume-button')){
+                        entry.target.classList.remove('-translate-y-20', 'opacity-0', 'text-green-500')
+                        entry.target.classList.add('transition', 'duration-[2000ms]', 'ease-in-out', 'text-white')
+                        observer.unobserve(entry.target)
+                    }
+
                     if(entry.target.classList.contains('intersect1')){
                         activeInterectText = "Arcana"
                         intersect1 = Math.round(entry.intersectionRatio * 100) + 25
@@ -134,6 +140,10 @@
         <div class="text-start mx-5">
             <p class="animated name-text -translate-x-32 opacity-0 text-5xl md:text-7xl font-quicksand mb-2">Jake Brian Yap (@iaiaian1)</p>
             <p class="animated desc-text -translate-y-14 opacity-0 text-3xl md:text-5xl font-nanum text-white">I code and edit stuffs.</p>
+            <a href="/resume.pdf" target="_blank" referrerpolicy="no-referrer" class="animated resume-button -translate-y-20 opacity-0 flex items-center justify-center gap-1 border-4 w-28 border-green-900 rounded-3xl p-1 font-quicksand bg-green-500 font-bold text-green-500 hover:bg-green-900">
+                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAALtJREFUSEvtlNENgzAMRG3Z7EE3gVGYBEZhE9iE7BFsV0gURagQGoH6AfmNdS93Ogfh4oMX68PNACJiU6REdNj54cFJ+AFEG3vziLbsi0gDAPVGfi0RVeHdWmep6V6+IjIAQB4KmVnPzOUanAQws1xVuwDiiOj1zVUSYBIKIapaZlnWnwqYN7kxM8fM7Vankx1El2Qe+B9gHMcOEYujL92bCxu21NR7XyBifQLEqWr1KcFP33WKuwcQTe0NtnONGVOMsSwAAAAASUVORK5CYII="/>
+                <p>resume</p>
+            </a>
         </div>
     </div>
 </div>
