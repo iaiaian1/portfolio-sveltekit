@@ -19,11 +19,11 @@
         <img class="w-72 border-2 border-green-500 rounded-2xl pointer-events-none" src={me} alt="me">
         <div class="lg:text-lg lg:w-[50rem]">
             <p class="text-xl lg:text-2xl font-bold">Jake Brian Yap.</p>
-            <p class="text-lg lg:text-xl">Aspiring Software Developer.</p>
+            <p class="text-lg lg:text-xl">Software Developer.</p>
             <br>
-            <p>I'm a college graduate with a Bachelor's Degree in Information Technology at Filamer Christian University.</p>
+            <p>I'm a Software Developer/Technical Consultant with a Bachelor's Degree in Information Technology.</p>
             <br>
-            <p>I have various hobbies which are tinkering with computers; hardware and software, android phones, playing games, editing videos and writing codes. I learned a lot of programming languages in school too like Java, C#, Python, Flutter, PHP etc. I have recently started doing web-development and back-end development too and found it very interesting starting with React.</p>
+            <p>I have various hobbies which are tinkering with computers; hardware and software, android phones, playing games, editing videos and writing codes. I learned a lot of programming languages in school too like Java, C#, Python, Flutter, PHP etc. I have recently started doing web-development and back-end development too and found it very interesting starting with React and currently tinkering with ERP systems.</p>
             <br>
             <p>Tl;dr I'm a tech person!</p>
         </div>
@@ -38,6 +38,7 @@
                 <li>Learned <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://svelte.dev/" referrerpolicy="no-referrer" target="_blank">Svelte</a> and <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://kit.svelte.dev/" referrerpolicy="no-referrer" target="_blank">SvelteKit.</a></li>
                 <li>Finished On-The-Job Internship.</li>
                 <li>Finished my college degree!</li>
+                <li>Software Developer/Technical Consultant at <a class="underline decoration-green-500 font-bold transition-all duration-300 hover:decoration-green-600" href="https://www.serviotech.com/" referrerpolicy="no-referrer" target="_blank">Servio Technologies</a></li>
             </ul>
         </div>
         <div class="border-t-2">

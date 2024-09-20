@@ -18,7 +18,7 @@
                 <li><span class="font-bold">CPU:</span> Intel i5 - 4460k.</li>
                 <li><span class="font-bold">MOBO:</span> ASUS H81M-A.</li>
                 <li><span class="font-bold">RAM:</span> 12gb DDR3.</li>
-                <li><span class="font-bold">GPU:</span> Sapphire RX560 4gb (AmernimeZ).</li>
+                <li><span class="font-bold">GPU:</span> Sapphire RX580 8gb (AmernimeZ).</li>
                 <li><span class="font-bold">Case:</span> Rakk Kisig.</li>
                 <li><span class="font-bold">CPU Cooler:</span> Deepcool.</li>
             </ul>
